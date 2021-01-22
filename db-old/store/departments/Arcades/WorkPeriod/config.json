@@ -1,0 +1,55 @@
+{
+  "openPeriod": {
+    "initalData": {}
+  },
+  "data": [
+    {
+      "id": "8d339313-996c-47ad-b267-1f2983497219",
+      "dateStarted": "04/15/2020",
+      "dateStartedString": "Wednesday, April 15, 2020 9:45 AM",
+      "time": "9:45 AM",
+      "fileName": "work_period_42",
+      "date": "2020-04-15T09:45:49+02:00",
+      "note": "tre",
+      "ticketsId": [],
+      "user": "Adminstartor",
+      "department": "Arcades Mall",
+      "departmentInfo": {
+        "id": "4ade9571-6ab6-4150-83f3-e4b5f9574a78",
+        "dep": "Arcades Mall",
+        "file": "Arcades"
+      },
+      "count": 42,
+      "year": "2020",
+      "month": "April",
+      "week": "week_3",
+      "day": "Wednesday"
+    },
+    {
+      "id": "10e4044e-14dc-45e8-b2f7-32d95031805e",
+      "dateStarted": "04/15/2020",
+      "dateStartedString": "Wednesday, April 15, 2020 9:49 AM",
+      "dateEnded": "04/15/2020",
+      "dateEndedString": "Wednesday, April 15, 2020 9:49 AM",
+      "time": "9:49 AM",
+      "timeEnded": "9:49 AM",
+      "fileName": "work_period_43",
+      "date": "2020-04-15T09:49:30+02:00",
+      "note": "",
+      "ticketsId": [],
+      "user": "Adminstartor",
+      "department": "Arcades Mall",
+      "departmentInfo": {
+        "id": "4ade9571-6ab6-4150-83f3-e4b5f9574a78",
+        "dep": "Arcades Mall",
+        "file": "Arcades"
+      },
+      "workedFor": "  0 minutes",
+      "count": 43,
+      "year": "2020",
+      "month": "April",
+      "week": "week_3",
+      "day": "Wednesday"
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "Products": [
+    {
+      "tabname": "ytuuu",
+      "background": "#ff0080",
+      "color": "#fafafa",
+      "index": 0,
+      "id": "ed999b1a-f6b9-4056-b694-bc0d1a242888",
+      "category": [
+        {
+          "categoryKey": 0,
+          "cartname": "5555",
+          "subcart": [
+            {
+              "productKey": "8ffaa411-a729-4f19-b8cb-b779cd8a7d34",
+              "ItemName": "Test product 1",
+              "barcode": "6009650800248",
+              "sallingprice": "9000",
+              "initalPrice": "9000",
+              "qnt": 1,
+              "multiplier": "34",
+              "alertOut": "3",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "1d27775b-ee88-44c5-8a7a-28378151bd2f",
+              "ItemName": "Test product 1",
+              "barcode": "6009650800248",
+              "sallingprice": "9000",
+              "initalPrice": "9000",
+              "qnt": 1,
+              "multiplier": "34",
+              "alertOut": "3",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "c1b6948f-fcec-489e-813d-cfeeed4fffcb",
+              "ItemName": "Test Product 1",
+              "barcode": "8904023700874",
+              "sallingprice": "9000",
+              "initalPrice": "9000",
+              "qnt": 1,
+              "multiplier": "33",
+              "alertOut": "3",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "22947f23-f632-4304-8f4e-fdd0e0c81423",
+              "ItemName": "test product 1",
+              "barcode": "8904023700874",
+              "sallingprice": "900",
+              "initalPrice": "900",
+              "qnt": 1,
+              "multiplier": "22",
+              "alertOut": "3",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "f418d0a8-2181-47b3-b6dd-fcbda9c82293",
+              "ItemName": "test product 1",
+              "sallingprice": "2222",
+              "initalPrice": "2222",
+              "qnt": 1,
+              "multiplier": "22",
+              "alertOut": "2",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "66059045-49e5-4371-9eaf-a999e43ac82a",
+              "ItemName": "test product 2",
+              "sallingprice": "2222",
+              "initalPrice": "2222",
+              "qnt": 1,
+              "multiplier": "22",
+              "alertOut": "2",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "a3b3a4df-218c-4eb8-b4c0-458210c8230d",
+              "ItemName": "test 4",
+              "barcode": 0,
+              "sallingprice": 0,
+              "initalPrice": 0,
+              "qnt": 1,
+              "multiplier": 0,
+              "alertOut": 0,
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": true,
+              "multi": [
+                {
+                  "sallingprice": "2000",
+                  "initalPrice": "2000",
+                  "qnt": 1,
+                  "multiplier": "21",
+                  "alertOut": "2",
+                  "amountInstore": 0,
+                  "isInstore": false
+                },
+                {
+                  "sallingprice": "3000",
+                  "initalPrice": "3000",
+                  "qnt": 1,
+                  "multiplier": "34",
+                  "alertOut": "3",
+                  "amountInstore": 0,
+                  "isInstore": false
+                }
+              ]
+            },
+            {
+              "productKey": "d5ecb94f-4868-466f-9047-7e29ae129417",
+              "ItemName": "test 7",
+              "barcode": 0,
+              "sallingprice": 0,
+              "initalPrice": 0,
+              "qnt": 1,
+              "multiplier": 0,
+              "alertOut": 0,
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": true,
+              "multi": [
+                {
+                  "sallingprice": "2222",
+                  "initalPrice": "2222",
+                  "qnt": 1,
+                  "multiplier": "22",
+                  "alertOut": "1",
+                  "amountInstore": 0,
+                  "isInstore": false
+                },
+                {
+                  "sallingprice": "90000",
+                  "initalPrice": "90000",
+                  "qnt": 1,
+                  "multiplier": "32",
+                  "alertOut": "3",
+                  "amountInstore": 0,
+                  "isInstore": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "test 2",
+      "background": "#008080",
+      "color": "#f9f9f9",
+      "index": 1,
+      "id": "2a126c46-b854-4e3b-aec0-7fa46cc045e7",
+      "category": [
+        {
+          "categoryKey": 1,
+          "cartname": "r 3",
+          "subcart": [
+            {
+              "productKey": "25c9b5b9-9c6b-47b9-a4c7-72c616a0f737",
+              "ItemName": "test 7",
+              "barcode": 0,
+              "sallingprice": 0,
+              "initalPrice": 0,
+              "qnt": 1,
+              "multiplier": 0,
+              "alertOut": 0,
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": true,
+              "multi": [
+                {
+                  "sallingprice": "9000",
+                  "initalPrice": "9000",
+                  "qnt": 1,
+                  "multiplier": "2",
+                  "alertOut": "1",
+                  "amountInstore": 0,
+                  "isInstore": false
+                },
+                {
+                  "sallingprice": "9876",
+                  "initalPrice": "9876",
+                  "qnt": 1,
+                  "multiplier": "5",
+                  "alertOut": "2",
+                  "amountInstore": 0,
+                  "isInstore": false
+                }
+              ]
+            },
+            {
+              "productKey": "555c5e29-6b27-4bf4-9337-8690c4829387",
+              "ItemName": "test 7",
+              "barcode": 0,
+              "sallingprice": 0,
+              "initalPrice": 0,
+              "qnt": 1,
+              "multiplier": 0,
+              "alertOut": 0,
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": true,
+              "multi": [
+                {
+                  "sallingprice": "288",
+                  "initalPrice": "288",
+                  "qnt": 1,
+                  "multiplier": "22",
+                  "alertOut": "1",
+                  "amountInstore": 0,
+                  "isInstore": false
+                },
+                {
+                  "sallingprice": "2000",
+                  "initalPrice": "2000",
+                  "qnt": 1,
+                  "multiplier": "3",
+                  "alertOut": "1",
+                  "amountInstore": 0,
+                  "isInstore": false
+                }
+              ]
+            },
+            {
+              "productKey": "96dd2155-5e70-4cf0-9a94-252fc57f8613",
+              "ItemName": "erttyu",
+              "sallingprice": "33333",
+              "initalPrice": "33333",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "33",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "group test",
+      "background": "#0000a0",
+      "color": "#ffffff",
+      "index": 2,
+      "id": "8977ab0f-af2a-4f88-9c7c-62d88ff5655e",
+      "category": [
+        {
+          "categoryKey": 2,
+          "cartname": "tyyy",
+          "subcart": [
+            {
+              "productKey": "dfecb6e0-698b-425d-90f4-b68c6e5fbb5e",
+              "ItemName": "tesrtg ",
+              "barcode": 0,
+              "sallingprice": 0,
+              "initalPrice": 0,
+              "qnt": 1,
+              "multiplier": 0,
+              "alertOut": 0,
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": true,
+              "multi": [
+                {
+                  "sallingprice": "200",
+                  "initalPrice": "200",
+                  "qnt": 1,
+                  "multiplier": "1",
+                  "alertOut": "22",
+                  "amountInstore": 0,
+                  "isInstore": false
+                },
+                {
+                  "sallingprice": "3333",
+                  "initalPrice": "3333",
+                  "qnt": 1,
+                  "multiplier": "2",
+                  "alertOut": "22",
+                  "amountInstore": 0,
+                  "isInstore": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "Covers",
+      "background": "#008040",
+      "color": "#ffffff",
+      "index": 3,
+      "id": "bd7a2cb1-426f-4a51-bfc7-68146feb8a9a",
+      "category": [
+        {
+          "categoryKey": 3,
+          "cartname": "Silicon Cover",
+          "subcart": [
+            {
+              "productKey": "ffde4aab-b3c1-4f65-8e38-ed9d96980f77",
+              "ItemName": "Silicon Cover",
+              "sallingprice": "6666",
+              "initalPrice": "6666",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "66",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "Games PS4",
+      "background": "#800000",
+      "color": "#f9f9f9",
+      "index": 4,
+      "id": "d574193b-0299-4a85-ac97-3c4a57289d8b",
+      "category": [
+        {
+          "categoryKey": 4,
+          "cartname": "Play Station 3 Game CD",
+          "subcart": [
+            {
+              "productKey": "7f898ff1-5f8f-48c1-9e8c-8c1af7b1d9f3",
+              "ItemName": "CP 400",
+              "sallingprice": "400",
+              "initalPrice": "400",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "b45d5256-7580-4b77-8093-a8ebb1200d88",
+              "ItemName": "CP 450",
+              "sallingprice": "450",
+              "initalPrice": "450",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "f93b912c-95f7-4078-8bdb-bc27ef93d38c",
+              "ItemName": "CP 500",
+              "sallingprice": "500",
+              "initalPrice": "500",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "366cc5e1-1681-4360-b1d6-483d76f43be2",
+              "ItemName": "CP 550",
+              "sallingprice": "550",
+              "initalPrice": "550",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "584d4607-651a-492d-8e87-a17b114b9e85",
+              "ItemName": "CP 600",
+              "sallingprice": "600",
+              "initalPrice": "600",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "bd6450c5-4ebe-4241-b60e-912a86f36550",
+              "ItemName": "CP 650",
+              "sallingprice": "650",
+              "initalPrice": "650",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "86b0140c-dc07-4743-bed3-4db205a53aeb",
+              "ItemName": "CP 700",
+              "sallingprice": "700",
+              "initalPrice": "700",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "4d50faba-1ebb-4fc7-a923-287419fb72f4",
+              "ItemName": "CP 750",
+              "sallingprice": "750",
+              "initalPrice": "750",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "12",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "43fd95a2-4f75-49e0-a1b0-f9b5c4b3598f",
+              "ItemName": "CP 800",
+              "sallingprice": "800",
+              "initalPrice": "800",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "22",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "ea555db7-26a0-48df-a2cc-9731c50477a7",
+              "ItemName": "CP 850",
+              "sallingprice": "850",
+              "initalPrice": "850",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "22",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "1e52fdff-2b8f-4c2c-a32b-83ddb10ffc04",
+              "ItemName": "CP 900",
+              "sallingprice": "900",
+              "initalPrice": "900",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "22",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "10ab5057-8302-4602-9294-08fc11315cd1",
+              "ItemName": "CP 950",
+              "sallingprice": "950",
+              "initalPrice": "950",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "22",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "848bcb7d-eca4-43d9-9283-feabae7d4bf7",
+              "ItemName": "CP 1000",
+              "sallingprice": "1000",
+              "initalPrice": "1000",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "22",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "Apple Accessories",
+      "background": "#004040",
+      "color": "#fcfcfc",
+      "index": 5,
+      "id": "f967ad35-33db-4cbd-8766-84604ac926ab",
+      "category": [
+        {
+          "categoryKey": 5,
+          "cartname": "Apple Accessories",
+          "subcart": [
+            {
+              "productKey": "e41962f5-5415-4bf1-b0b7-7dce64178140",
+              "ItemName": "I pad Pro Smart Key Board",
+              "sallingprice": "2100",
+              "initalPrice": "2100",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "2",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "18f66a6a-e7e2-4811-a94c-f599c5de082a",
+              "ItemName": "Apple Magic Mouse 2",
+              "sallingprice": "1700",
+              "initalPrice": "1700",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "2",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            },
+            {
+              "productKey": "de024172-221d-4996-8925-23e0d536fb42",
+              "ItemName": "Apple Pencil",
+              "sallingprice": "1700",
+              "initalPrice": "1700",
+              "qnt": 1,
+              "multiplier": "1",
+              "alertOut": "2",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabname": "Test Button",
+      "background": "#3b3b3b",
+      "color": "#fff",
+      "index": 6,
+      "id": "936b4f7e-d368-4915-8843-ef584a18e6e0",
+      "category": [
+        {
+          "categoryKey": 6,
+          "cartname": "Test Button",
+          "subcart": [
+            {
+              "productKey": "138ac0b8-800f-4c01-9fc1-1e17053c48bc",
+              "ItemName": "tsss",
+              "sallingprice": "222",
+              "initalPrice": "222",
+              "qnt": 1,
+              "multiplier": "2",
+              "alertOut": "33",
+              "amountInstore": 0,
+              "isInstore": false,
+              "isTaxEnabled": true,
+              "isMulity": false,
+              "multi": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
