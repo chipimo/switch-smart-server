@@ -119,6 +119,10 @@ module.exports = function (socket) {
     // });
   });
 
+  socket.on("NEW_BRANCH", (props)=>{
+    
+  })
+
   socket.on("SEND_TRANSTION", (props) => {
     connectedUsers.map((list) => {
       if (props.to === list.data.dep_name) {
@@ -312,11 +316,10 @@ module.exports = function (socket) {
       data: { layoutType: "all_Products_list", _type: "getPOSList" },
       socketId: socket.id,
     };
-    console.log(data);
+    // console.log(data);
     
     HandelNewProducts(data, (callback) => {
-      console.log(callback);
-
+      // console.log(callback);
       io.to(callback.socketId).emit("ALLPRODUCTSLIST", callback);
     });
   });
