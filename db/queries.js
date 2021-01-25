@@ -199,6 +199,8 @@ module.exports = {
   },
 
   _SalesReports(props, sendCallback) {
+    // console.log(props);
+
     knex("sales_reports_tikets")
       .insert({
         id: props.Userdata.data.id,
@@ -233,16 +235,23 @@ module.exports = {
           ? props.Userdata.data.Balance
           : props.Userdata.data.RtxBalance,
         Discount: props.Userdata.data.Discount,
+        Card_slipt: props.Userdata.data.Card_slipt,
+        Cash_slipt: props.Userdata.data.Cash_slipt,
         Date: props.Userdata.data.Date,
         Datetrack: props.Userdata.data.Datetrack,
+        dateRange: props.Userdata.dateRange,
         Department: props.Userdata.data.department,
+        TotalQt: props.Userdata.data.totalQt,
         User: props.Userdata.data.user,
         PaymentType: props.Userdata.data.paymentType,
         isTaxInvoice: props.Userdata.data.isTaxInvoice,
+        isActive: true,
         Note: props.Userdata.data.note,
         totalTaxFinal: props.Userdata.data.totalTaxFinal,
         totalTax: props.Userdata.data.totalTax,
         time: props.Userdata.data.time,
+        timeRange: props.Userdata.data.timeRange,
+        isBackedUp: true,
       })
       .then(function () {
         knex
@@ -285,10 +294,13 @@ module.exports = {
                   Discount: props.Userdata.data.Discount,
                   Date: props.Userdata.data.Date,
                   Datetrack: props.Userdata.data.Datetrack,
+                  DateTrackNumber: props.Userdata.data.DateTrackNumber,
                   Department: props.Userdata.data.department,
                   totalTaxFinal: props.Userdata.data.totalTaxFinal,
                   totalTax: props.Userdata.data.totalTax,
                   time: props.Userdata.data.time,
+                  timeRange: props.Userdata.data.timeRange,
+                  isBackedUp: true,
                 })
                 .then(function () {
                   knex
@@ -403,10 +415,13 @@ module.exports = {
                         Discount: props.Userdata.data.Discount,
                         Date: props.Userdata.data.Date,
                         Datetrack: props.Userdata.data.Datetrack,
+                        DateTrackNumber: props.Userdata.data.DateTrackNumber,
                         Department: props.Userdata.data.department,
                         totalTaxFinal: props.Userdata.data.totalTaxFinal,
                         totalTax: props.Userdata.data.totalTax,
                         time: props.Userdata.data.time,
+                        timeRange: props.Userdata.data.timeRange,
+                        isBackedUp: true,
                       })
                       .then(function () {
                         knex
@@ -430,16 +445,106 @@ module.exports = {
   },
 
   _GetSalesReports(props, sendCallback) {
-    knex
-      .select()
-      .from("sales_reports_totals")
-      .where({ [props.Userdata.dateType]: props.Userdata.date })
-      .then(function (data) {
-        sendCallback({
-          socketId: props.socketId,
-          data,
+    var totals = [];
+    var tickets = [];
+    var products = [];
+
+    if (props.Userdata.time.startTimeSet === 0)
+      knex
+        .select()
+        .from("sales_reports_totals")
+        .where({ Department: props.Userdata.dep.branche })
+        .whereBetween("DateTrackNumber", [
+          props.Userdata.startDate,
+          props.Userdata.endDate,
+        ])
+        .leftJoin(
+          "branches",
+          "sales_reports_totals.Department",
+          "branches.brancheId"
+        )
+        .then(function (data) {
+          totals = data;
+
+          knex
+            .select()
+            .from("sales_reports_tikets")
+            .where({ Department: props.Userdata.dep.branche })
+            .whereBetween("dateRange", [
+              props.Userdata.startDate,
+              props.Userdata.endDate,
+            ])
+            .leftJoin(
+              "branches",
+              "sales_reports_tikets.Department",
+              "branches.brancheId"
+            )
+            .leftJoin("users", "sales_reports_tikets.User", "users.id")
+            .then(function (data) {
+              tickets = data;
+
+              knex
+                .select()
+                .from("sales_reports_tikets_trx")
+                .where({ Department: props.Userdata.dep.branche })
+                .whereBetween("dateRange", [
+                  props.Userdata.startDate,
+                  props.Userdata.endDate,
+                ])
+                .leftJoin(
+                  "branches",
+                  "sales_reports_tikets_trx.Department",
+                  "branches.brancheId"
+                )
+                .leftJoin("users", "sales_reports_tikets_trx.User", "users.id")
+                .then(function (trxData) {
+                  trxData.map((list) => {
+                    tickets.push(list);
+                  });
+
+                  knex
+                    .select()
+                    .from("products")
+                    .where({ branches: props.Userdata.dep.branche })
+                    .then(function (productList) {
+                      product = productList;
+
+                      sendCallback({
+                        socketId: props.socketId,
+                        tickets,
+                        totals,
+                        products,
+                      });
+                    });
+                });
+            });
         });
-      });
+    else
+      knex
+        .select()
+        .from("sales_reports_totals")
+        .where({ Department: props.Userdata.dep.branche })
+        .leftJoin(
+          "branches",
+          "sales_reports_totals.Department",
+          "branches.brancheId"
+        )
+        .whereBetween("DateTrackNumber", [
+          props.Userdata.startDate,
+          props.Userdata.endDate,
+        ])
+        .andWhere(function () {
+          this.whereBetween("timeRange", [
+            props.Userdata.time.startTimeSet,
+            props.Userdata.time.endTimeSet,
+          ]);
+        })
+        .then(function (data) {
+          // console.log(data);
+          sendCallback({
+            data,
+          });
+        });
   },
 
   _SetTranferReports(props, sendCallback) {
@@ -611,7 +716,7 @@ module.exports = {
             });
           });
       });
-  }, 
+  },
 
   _GetBackUp(props, sendCallback) {
     HandelNewProducts(props, (callback) => {
@@ -620,6 +725,32 @@ module.exports = {
         data: callback,
       });
     });
+  },
+
+  _SetBranch(props, sendCallback) {
+    knex("branches")
+      .insert({
+        brancheId: props.id,
+        company: props.company,
+        branche: props.branche,
+      })
+      .then(function () {
+        knex
+          .select()
+          .from("branches")
+          .then(function (data) {
+            sendCallback(data);
+          });
+      });
+  },
+
+  _GetBranch(props, sendCallback) {
+    knex
+      .select()
+      .from("branches")
+      .then(function (data) {
+        sendCallback(data);
+      });
   },
 
   _StartWorkPeroid(props, sendCallback) {
@@ -760,7 +891,7 @@ module.exports = {
       });
     } else if (props.type === "totals") {
       // console.log(props);
-      
+
       var loopLength = 0;
 
       props.data.data.map((list) => {

@@ -13,7 +13,7 @@ module.exports = {
           sellingPriceOld: props.sellingPriceOld,
           buyingPrice: props.buyingPrice,
           buyingPriceOld: props.buyingPriceOld,
-          supplier: props.supplier,
+          supplier:' props.supplier',
           quantity: props.quantity,
           invoiceNumber: props.invoiceNumber,
           EventDate: props.EventDate,

@@ -115,7 +115,7 @@ module.exports = {
                                 ? ""
                                 : props.data.portion[0].barcode5,
                             branches: props.data.branch,
-                            supplier: props.data.ProductSupplier.supplierKey,
+                            supplier: 'props.data.ProductSupplier.supplierKey',
                             sallingprice: isMulity
                               ? tatolSellingPrice
                               : props.data.portion[0].price,
@@ -128,7 +128,7 @@ module.exports = {
                             alertOut: isMulity
                               ? 0
                               : props.data.portion[0].alertOut,
-                            amountInstore: tatolProductQty,
+                            amountInstore: props.data.productQt,
                             sync: true,
                             expiryDate:'',
                             isExpired: false,
@@ -147,8 +147,8 @@ module.exports = {
                               buyingPrice: tatolCostPrice,
                               buyingPriceOld: tatolCostPrice,
                               supplier:
-                                props.data.ProductSupplier.supplierKey,
-                              quantity: tatolProductQty,
+                                'props.data.ProductSupplier.supplierKey',
+                              quantity: props.data.productQt,
                               invoiceNumber: props.data.invoice,
                               EventDate: moment().format("MM/DD/YYYY"),
                               dateRange: parseInt(DateNumInput),
@@ -172,7 +172,7 @@ module.exports = {
                                     barcode4: data.barcode4,
                                     barcode5: data.barcode5,
                                     alertOut: parseInt(data.alertOut),
-                                    amountInstore: parseInt(data.quantity),
+                                    amountInstore: props.data.productQt,
                                     isInstore: true,
                                     isTaxEnabled: true,
                                   })
@@ -236,7 +236,7 @@ module.exports = {
                             ? ""
                             : props.data.portion[0].barcode5,
                         branches: props.data.branch,
-                        supplier: props.data.ProductSupplier.supplierKey,
+                        supplier: 'props.data.ProductSupplier.supplierKey',
                         sallingprice: isMulity
                           ? tatolSellingPrice
                           : props.data.portion[0].price,
@@ -247,7 +247,7 @@ module.exports = {
                         qnt: 1,
                         multiplier: 0,
                         alertOut: isMulity ? 0 : props.data.portion[0].alertOut,
-                        amountInstore: tatolProductQty,
+                        amountInstore: props.data.productQt,
                         sync: false,
                         expiryDate:'',
                         isExpired: false,
@@ -266,8 +266,8 @@ module.exports = {
                           sellingPriceOld: props.data.portion[0].price,
                           buyingPrice: tatolCostPrice,
                           buyingPriceOld: tatolCostPrice,
-                          supplier: props.data.ProductSupplier.supplierKey,
-                          quantity: tatolProductQty,
+                          supplier: 'props.data.ProductSupplier.supplierKey',
+                          quantity: props.data.productQt,
                           invoiceNumber: props.data.invoice,
                           EventDate: moment().format("MM/DD/YYYY"),
                           dateRange: parseInt(DateNumInput),
@@ -291,7 +291,7 @@ module.exports = {
                                 barcode4: data.barcode4,
                                 barcode5: data.barcode5,
                                 alertOut: parseInt(data.alertOut),
-                                amountInstore: parseInt(data.quantity),
+                                amountInstore: props.data.productQt,
                                 isInstore: true,
                                 isTaxEnabled: true,
                               })

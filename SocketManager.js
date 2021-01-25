@@ -23,6 +23,8 @@ const {
   _EndWorkPeroid,
   _GetTicketsReports,
   _RunBackUp,
+  _SetBranch,
+  _GetBranch,
 } = require("./db/queries");
 const { HandelNewProducts } = require("./db/products");
 require("custom-env").env();
@@ -30,7 +32,7 @@ const { SetGroups, GetGroups, DeleteGroups } = require("./db/group");
 
 require("custom-env").env();
 
-var isProcessing = false; 
+var isProcessing = false;
 // var count = 0;
 
 // var $ipsConnected = [];
@@ -119,9 +121,17 @@ module.exports = function (socket) {
     // });
   });
 
-  socket.on("NEW_BRANCH", (props)=>{
-    
-  })
+  socket.on("NEW_BRANCH", (props) => {
+    _SetBranch(props, (reciveCallback) => {
+      io.emit("ALL_BRANCHES", reciveCallback);
+    });
+  });
+
+  socket.on("GET_BRANCH", (props, sendCallback) => {
+    _GetBranch(props, (reciveCallback) => {
+      io.emit("ALL_BRANCHES", reciveCallback);
+    });
+  });
 
   socket.on("SEND_TRANSTION", (props) => {
     connectedUsers.map((list) => {
@@ -233,9 +243,9 @@ module.exports = function (socket) {
   socket.on("InstData", (data) => {
     let Data = {
       Userdata: data,
-      socketId: socket.id, 
+      socketId: socket.id,
     };
-    console.log(Data);
+    // console.log(Data);
   });
 
   socket.on("UPDATEPRODCTS", (data) => {
@@ -244,22 +254,16 @@ module.exports = function (socket) {
       socketId: socket.id,
     };
   });
- 
+
   socket.on("SALESREPORT", (data) => {
     let Data = {
       Userdata: data,
-      socketId: socket.id,
-    };
+      socketId: socket.id, 
+    }; 
 
-    if (!isProcessing) {
-      isProcessing = true;
-      _SalesReports(Data, (callback) => {
-        io.emit("SALESREPORTLIST", callback);
-      });
-    }
-    setTimeout(() => {
-      isProcessing = false;
-    }, 200);
+    _SalesReports(Data, (callback) => {
+      io.emit("SALESREPORTLIST", callback);
+    });
   });
 
   socket.on("GETSALESREPORT", (data) => {
@@ -269,10 +273,10 @@ module.exports = function (socket) {
     };
 
     _GetSalesReports(Data, (revicedCallback) => {
-      // console.log(revicedCallback.data);
+      // console.log(revicedCallback);
       io.to(revicedCallback.socketId).emit(
         "SALESREPORTSALET",
-        revicedCallback.data
+        revicedCallback
       );
     });
   });
@@ -296,13 +300,13 @@ module.exports = function (socket) {
       io.emit("SALESTICKETRESULT", callback.data);
     });
   });
- 
+
   socket.on("UPDATENEWPROUDCT", (data) => {
     // console.log(data);
 
     HandelNewProducts(data, (callback) => {
       io.emit("PRODUCTUPDATES", callback);
-    }); 
+    });
   });
 
   // socket.on("UPDATENEWPROUDCT", (data) => {
@@ -317,7 +321,7 @@ module.exports = function (socket) {
       socketId: socket.id,
     };
     // console.log(data);
-    
+
     HandelNewProducts(data, (callback) => {
       // console.log(callback);
       io.to(callback.socketId).emit("ALLPRODUCTSLIST", callback);
@@ -395,7 +399,10 @@ module.exports = function (socket) {
     };
     _RunBackUp(data, (reciveCallback) => {
       // console.log(reciveCallback);
-      io.to(reciveCallback.socketId).emit("HANDEL_REPORTS_BACKUP_ISDONE", reciveCallback);
+      io.to(reciveCallback.socketId).emit(
+        "HANDEL_REPORTS_BACKUP_ISDONE",
+        reciveCallback
+      );
     });
   });
 };
